@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfControlLibrary.CircularProgressBarView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlLibrary"
+        WindowStyle="None" ShowInTaskbar="False" 
+        ResizeMode="NoResize" 
+        SizeToContent="WidthAndHeight" 
+        WindowStartupLocation="CenterOwner"
+        Background="LightGray">
+    <Grid>
+        <local:CircularProgressBar x:Name="FirstCircularProgressBar" HorizontalAlignment="Center" VerticalAlignment="Center" StrokeThickness="40" SegmentColor="White" Percentage="100" Radius="24" />
+        <local:CircularProgressBar x:Name="SecondCircularProgressBar" VerticalAlignment="Center" HorizontalAlignment="Center" StrokeThickness="40" SegmentColor="Green" Percentage="100" Radius="19"/>
+        <local:CircularProgressBar x:Name="ThirdCircularProgressBar" HorizontalAlignment="Center" VerticalAlignment="Center" StrokeThickness="40" SegmentColor="White" Percentage="0" Radius="20"/>
+    </Grid>
+</Window>
