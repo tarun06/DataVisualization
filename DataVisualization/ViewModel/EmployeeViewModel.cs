@@ -1,11 +1,8 @@
 ﻿using DatabaseLayer;
 using DataVisualization.Commands;
 using DataVisualization.Model;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,12 +16,11 @@ namespace DataVisualization.ViewModel
         private EmployeeModel _employeeModel;
         private Command _loadEmployeeCommand;
         private IProgress _progress;
-        private Command _stopCommand;
 
-        public EmployeeViewModel(IProgress progress)
+        public EmployeeViewModel()
         {
             _employeeModel = new EmployeeModel();
-            _progress = progress;
+            _progress = new Progress();
         }
 
         public ObservableCollection<Employee> EmployeeCollection
@@ -42,9 +38,6 @@ namespace DataVisualization.ViewModel
 
         public Command LoadEmployeeCommand => _loadEmployeeCommand ??
                   (_loadEmployeeCommand = new Command(StartLoadingData, () => true));
-
-        public Command StopCommand => _stopCommand ??
-                  (_stopCommand = new Command(StopLoadingData, () => true));
 
         private void StartLoadingData()
         {
@@ -68,11 +61,6 @@ namespace DataVisualization.ViewModel
                 dispatcher.Invoke(() => _progress.TryClose());
             });
             _progress.TryShow();
-        }
-
-        private void StopLoadingData()
-        {
-            _progress.TryClose();
         }
     }
 }

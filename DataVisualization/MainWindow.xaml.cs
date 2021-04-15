@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfControlLibrary;
 
 namespace DataVisualization
 {
@@ -24,8 +23,7 @@ namespace DataVisualization
         public MainWindow()
         {
             InitializeComponent();
-            var progress = new Progress();
-            DataContext = new ViewModel.EmployeeViewModel(progress);
+            DataContext = new ViewModel.EmployeeViewModel();
         }
     }
 }
