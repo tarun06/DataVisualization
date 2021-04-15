@@ -57,7 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="NotifyPropertyBase.cs" />
     <Compile Include="ViewModel\EmployeeViewModel.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="EmployeeDataView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -66,8 +66,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Commands\Command.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="EmployeeDataView.cs">
+      <DependentUpon>EmployeeDataView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

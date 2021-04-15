@@ -18,9 +18,9 @@ namespace DataVisualization
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EmployeeDataView : Window
     {
-        public MainWindow()
+        public EmployeeDataView()
         {
             InitializeComponent();
             DataContext = new ViewModel.EmployeeViewModel();
